@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Video - Image / Text to Video</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="back-button" onclick="window.location.href='index.html'">← Back</button>
+            <h1>Create Your Video</h1>
+        </header>
+        
+        <main class="create-main">
+            <div class="input-section">
+                <div class="text-input">
+                    <label for="video-description">Video Description</label>
+                    <textarea 
+                        id="video-description" 
+                        placeholder="Describe what you want to create... For example: 'A sunset over the ocean with dolphins jumping' or 'A futuristic city with flying cars'"
+                        rows="4"
+                    ></textarea>
+                </div>
+                
+                <div class="image-upload">
+                    <label>Upload Images (Optional)</label>
+                    <div class="drop-zone" id="drop-zone">
+                        <div class="drop-zone-content">
+                            <div class="upload-icon">📁</div>
+                            <p>Drag & drop images here</p>
+                            <p class="small-text">or click to browse</p>
+                        </div>
+                        <input type="file" id="file-input" accept="image/*" multiple hidden>
+                    </div>
+                    <div class="image-preview" id="image-preview"></div>
+                </div>
+            </div>
+            
+            <button class="generate-button" id="generate-button">
+                Generate Video
+            </button>
+        </main>
+        
+        <div class="loading-overlay" id="loading-overlay">
+            <div class="loading-content">
+                <div class="spinner"></div>
+                <h2>Creating your video...</h2>
+                <p class="loading-text" id="loading-text">Initializing AI models...</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts in correct order for Vercel -->
+    <script src="config.js"></script>
+    <script src="gemini-service.js"></script>
+    <script src="ai-service.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
