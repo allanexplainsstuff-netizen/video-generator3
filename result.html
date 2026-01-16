@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Video - Image / Text to Video</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="back-button" onclick="window.location.href='create.html'">← Back</button>
+            <h1>Your Video is Ready!</h1>
+        </header>
+        
+        <main class="result-main">
+            <div class="video-container">
+                <video controls class="result-video" id="result-video">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <div class="ai-source-indicator" id="ai-source-indicator"></div>
+            
+            <div class="prompt-section">
+                <div class="prompt-card">
+                    <h3>✨ Enhanced Video Prompt</h3>
+                    <div class="prompt-content">
+                        <div class="original-prompt">
+                            <strong>Your Input:</strong>
+                            <p id="original-prompt-text">Loading...</p>
+                        </div>
+                        <div class="enhanced-prompt">
+                            <strong>Enhanced Version:</strong>
+                            <p id="enhanced-prompt-text">Loading...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="result-actions">
+                <button class="download-button" id="download-button">
+                    Download Video
+                </button>
+                <button class="create-another-button" onclick="window.location.href='create.html'">
+                    Create Another Video
+                </button>
+            </div>
+            
+            <div class="video-info">
+                <h3>Video Details</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Duration:</span>
+                        <span class="info-value">30 seconds</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Resolution:</span>
+                        <span class="info-value">1920x1080</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Format:</span>
+                        <span class="info-value">MP4</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Scripts in correct order for Vercel -->
+    <script src="config.js"></script>
+    <script src="gemini-service.js"></script>
+    <script src="ai-service.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

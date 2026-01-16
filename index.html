@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image / Text to Video</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Image / Text to Video</h1>
+            <p class="subtitle">Transform your ideas into stunning videos with AI</p>
+        </header>
+        
+        <main class="home-main">
+            <div class="hero-section">
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Text to Video</h3>
+                    <p>Describe your vision and watch it come to life</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🖼️</div>
+                    <h3>Image to Video</h3>
+                    <p>Upload images and create animated stories</p>
+                </div>
+            </div>
+            
+            <button class="cta-button" id="create-video-btn">
+                Create Video
+            </button>
+        </main>
+    </div>
+    
+    <script>
+        // Simple redirect function
+        function goToCreatePage() {
+            window.location.href = 'create.html';
+        }
+
+        // Ensure button works after page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.getElementById('create-video-btn');
+            if (button) {
+                button.addEventListener('click', goToCreatePage);
+            }
+        });
+    </script>
+</body>
+</html>
