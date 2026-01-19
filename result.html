@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Video Prompt - AI Enhancer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Enhanced Video Prompt</h1>
+            <a href="create.html" class="back-link">← Create New</a>
+        </header>
+        
+        <main>
+            <div class="result-section">
+                <div class="result-card">
+                    <h3>Original Prompt</h3>
+                    <p id="originalPrompt" class="prompt-text"></p>
+                </div>
+                
+                <div class="result-card">
+                    <h3>Enhanced Prompt</h3>
+                    <p id="enhancedPrompt" class="prompt-text"></p>
+                    <div class="provider-info">
+                        <span>Enhanced by: <strong id="providerUsed"></strong></span>
+                    </div>
+                </div>
+                
+                <div class="video-preview">
+                    <h3>Preview</h3>
+                    <div class="video-placeholder">
+                        <p>🎬 Video preview placeholder</p>
+                        <p>Use the enhanced prompt in your preferred AI video generator</p>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="copyButton" class="btn-secondary">Copy Enhanced Prompt</button>
+                    <a href="create.html" class="btn-primary">Create Another</a>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Powered by Gemini & OpenAI</p>
+        </footer>
+    </div>
+    
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

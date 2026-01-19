@@ -1,0 +1,27 @@
+{
+  "name": "ai-video-prompt-enhancer",
+  "version": "1.0.0",
+  "description": "AI-powered video prompt enhancer using Gemini and OpenAI",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "openai": "^4.28.4"
+  },
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel"
+  },
+  "keywords": [
+    "ai",
+    "video",
+    "prompt",
+    "enhancer",
+    "gemini",
+    "openai"
+  ],
+  "author": "AI Video Prompt Enhancer",
+  "license": "MIT"
+}

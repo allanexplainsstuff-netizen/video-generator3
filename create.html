@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Video Prompt - AI Enhancer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Create Video Prompt</h1>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </header>
+        
+        <main>
+            <form id="promptForm" class="prompt-form">
+                <div class="form-group">
+                    <label for="promptText">Describe your video idea:</label>
+                    <textarea 
+                        id="promptText" 
+                        name="promptText" 
+                        rows="4" 
+                        placeholder="e.g., A serene sunset over a mountain lake with birds flying overhead..."
+                        required
+                    ></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="imageUpload">Upload reference image (optional):</label>
+                    <input 
+                        type="file" 
+                        id="imageUpload" 
+                        name="imageUpload" 
+                        accept="image/*"
+                    >
+                    <div id="imagePreview" class="image-preview"></div>
+                </div>
+                
+                <button type="submit" class="btn-primary">
+                    <span id="submitText">Enhance Prompt</span>
+                    <span id="loadingText" style="display: none;">Processing...</span>
+                </button>
+            </form>
+            
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+        </main>
+        
+        <footer>
+            <p>Powered by Gemini & OpenAI</p>
+        </footer>
+    </div>
+    
+    <script src="config.js"></script>
+    <script src="ai-service.js"></script>
+    <script src="gemini-service.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
